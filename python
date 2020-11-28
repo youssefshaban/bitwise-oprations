@@ -1,0 +1,31 @@
+def decimalToBinary(n):
+    return bin(n).replace("0b", "") 
+    
+def set_bit (x,position):
+    mask = 1 << position
+    print(decimalToBinary(mask))
+    print(int(decimalToBinary(mask), 2))
+    print(decimalToBinary(x | mask))
+    print(int(decimalToBinary(x | mask), 2))
+    return  x | mask
+    
+ def clear_bit (x,position):
+    mask = 1 << position
+    print(decimalToBinary(mask))
+    print(decimalToBinary(x & ~mask))
+    return  x & ~mask
+    
+ def flip_bit (x,position):
+    mask = 1 << position
+    print(decimalToBinary(x ^ mask))
+    return  x ^ mask
+    
+ def Is_Bit_Set (x,position):
+    shifted = x >> position
+    print(decimalToBinary(shifted & 1))
+    return  shifted & 1
+    # set_bit(5,6)print('--------')
+    Is_Bit_Set(101,5)
+    print(int('01100101',2))
+    print(int('00000101',2))
+    # print (setbit)
